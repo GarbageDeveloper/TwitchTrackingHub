@@ -1,0 +1,41 @@
+﻿@using TwitchInfo.Data
+@model Viewer
+
+<button class="btn btn-primary" id="add-streamer">Add A Streamer</button>
+
+<div id="add-streamer-div" class="hidden">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well">
+                <form method="POST" action="/Home/AddStreamer">
+                    <input type="text" name="streamerName" placeholder="Streamer Name" class="form-control" />
+                    <br />
+                    <input type="hidden" name="viewerId" value="@Model.Id" />
+                    <br />
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<h1>Hello @Model.FirstName</h1>
+<input id="viewer-id" type="hidden" value="@Model.Id" />
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>Streamer Name</th>
+        <th>Is Live</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var streamer in Model.Streamers)
+    {
+        <tr data-streamer-name="@streamer.StreamerName">
+            <td>@streamer.StreamerName</td>
+            <td></td>
+            <td><button class="btn btn-danger delete-streamer" data-streamer-id="@streamer.Id">Delete</button></td>
+        </tr>
+    }
+</table>
+
+@section scripts{
+    <script src="~/Scripts/TwitchAPI.js"></script>
+}

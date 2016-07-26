@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TwitchViewerAndStreamerDb">
+  <DataContextMoniker Name="/TwitchViewerAndStreamerDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="35eeab7f-f864-4f71-b7b3-e333bb4a61b7" absoluteBounds="4.5, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/TwitchViewerAndStreamerDbDataContext/Streamer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95000f35-1421-4ef4-a7ba-2c9096bf66e6" absoluteBounds="4.515, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9b05051-73c1-4a00-acea-2f8fc18e75ef" absoluteBounds="2, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/TwitchViewerAndStreamerDbDataContext/Viewer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94a1947b-016c-4cb5-9190-a985b2cd1afc" absoluteBounds="2.015, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 1.81814697265625); (4.5 : 1.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TwitchViewerAndStreamerDbDataContext/Viewer/Viewer_Streamer" />
+      <nodes>
+        <classShapeMoniker Id="e9b05051-73c1-4a00-acea-2f8fc18e75ef" />
+        <classShapeMoniker Id="35eeab7f-f864-4f71-b7b3-e333bb4a61b7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
